@@ -15,6 +15,12 @@ class User(db.Model):
 
     shipments = db.relationship('Shipment', backref='user', lazy=True)
 
+    def check_password(self, password, bcrypt):
+        return bcrypt.check_password_hash(self.password_hash, password)
+
+    def set_password(self, password, bcrypt):
+        self.password_hash = bcrypt.generate_password_hash(password).decode('utf-8')
+
 class Shipment(db.Model):
     __tablename__ = 'shipments'
     id = db.Column(db.Integer, primary_key=True)
