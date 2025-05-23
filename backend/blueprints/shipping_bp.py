@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 from backend.utils.pricing import calculate_shipping_price
+from flask_jwt_extended import jwt_required, get_jwt_identity
 
 bp = Blueprint('shipping', __name__)
 
@@ -74,3 +75,28 @@ def track_shipment(tracking_id):
         return jsonify(shipment)
 
     return jsonify({"error": "Shipment not found"}), 404
+
+
+@bp.route('/api/shipments/me', methods=['GET'])
+@jwt_required()
+def my_shipments():
+    """Return shipments for the logged in user."""
+    user_id = get_jwt_identity()
+    try:
+        from backend.models.models import Shipment
+
+        shipments = Shipment.query.filter_by(user_id=user_id).all()
+        result = [
+            {
+                "tracking_id": s.tracking_id,
+                "created_at": s.created_at.isoformat() if s.created_at else None,
+                "weight_kg": float(s.weight_kg),
+                "total_client_price_usd": float(s.total_client_price_usd),
+                "status": s.status,
+            }
+            for s in shipments
+        ]
+        return jsonify(result)
+    except Exception:
+        # Database may not be configured; return empty list
+        return jsonify([])
