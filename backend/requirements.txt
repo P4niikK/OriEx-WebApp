@@ -1,0 +1,7 @@
+pytest
+Flask
+SQLAlchemy
+Flask-SQLAlchemy
+psycopg2-binary
+Flask-Bcrypt
+Flask-JWT-Extended

@@ -9,3 +9,11 @@ Web application for managing shipping services from China to Argentina.
 
 This repository contains a basic project structure with a Flask backend and a React frontend.
 
+
+## Development
+
+Run the setup script before executing tests to ensure dependencies are installed:
+
+```bash
+./codex_setup.sh
+```
