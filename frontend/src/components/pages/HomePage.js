@@ -18,7 +18,9 @@ function HomePage() {
           <Link className={styles.primaryBtn} to="/shipping-calculator">
             Calcular Envío Ahora
           </Link>
-          <button className={styles.secondaryBtn}>Rastrear Paquete</button>
+          <Link className={styles.secondaryBtn} to="/tracking">
+            Rastrear Paquete
+          </Link>
         </div>
       </section>
 
