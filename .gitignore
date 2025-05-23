@@ -1,0 +1,14 @@
+# Ignore Python cache directories and compiled files
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+env/
+venv/
+
+# Node
+node_modules/
+
+# Build
+frontend/build/

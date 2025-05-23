@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/OriEx-WebApp/static/css/main.7a28e12b.css",
+    "main.js": "/OriEx-WebApp/static/js/main.f5281513.js",
+    "index.html": "/OriEx-WebApp/index.html",
+    "main.7a28e12b.css.map": "/OriEx-WebApp/static/css/main.7a28e12b.css.map",
+    "main.f5281513.js.map": "/OriEx-WebApp/static/js/main.f5281513.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a28e12b.css",
+    "static/js/main.f5281513.js"
+  ]
+}
