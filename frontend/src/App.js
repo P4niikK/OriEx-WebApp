@@ -1,8 +1,8 @@
+import HomePage from './components/pages/HomePage';
+
 function App() {
   return (
-    <div>
-      <h1>OriEx Frontend</h1>
-    </div>
+    <HomePage />
   );
 }
 
