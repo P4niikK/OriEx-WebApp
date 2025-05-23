@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import ShippingCalculator from '../shipping/ShippingCalculator';
 import styles from './HomePage.module.css';
 
 function HomePage() {
@@ -13,9 +15,16 @@ function HomePage() {
           conectar tus compras y negocios.
         </p>
         <div className={styles.heroButtons}>
-          <button className={styles.primaryBtn}>Calcular Envío Ahora</button>
+          <Link className={styles.primaryBtn} to="/shipping-calculator">
+            Calcular Envío Ahora
+          </Link>
           <button className={styles.secondaryBtn}>Rastrear Paquete</button>
         </div>
+      </section>
+
+      <section className={styles.calculatorSection}>
+        <h2>Calcula tu Envío</h2>
+        <ShippingCalculator />
       </section>
 
       <section className={styles.whyUs}>
