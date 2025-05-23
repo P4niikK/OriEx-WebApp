@@ -1,0 +1,56 @@
+.container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heroButtons button {
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+.whyUs {
+  margin-bottom: 3rem;
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.highlights li {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 2rem;
+  display: block;
+}
+
+.howItWorks {
+  margin-bottom: 3rem;
+}
+
+.steps {
+  list-style: decimal inside;
+  padding-left: 1rem;
+}
+
+.footer {
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.footerLinks a {
+  margin: 0 0.5rem;
+}
