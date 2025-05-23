@@ -7,4 +7,8 @@ def create_app():
     from . import routes
     app.register_blueprint(routes.bp)
 
+    # Register shipping blueprint
+    from backend.blueprints.shipping_bp import bp as shipping_bp
+    app.register_blueprint(shipping_bp)
+
     return app
